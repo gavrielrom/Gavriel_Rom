@@ -1,103 +1,131 @@
-:root {
-
-    --SandYellow: #feffd6;
-    --DarkGreen: #0b4b2b;
-    --SkyBlue: #00cbff;
-    --LightGreen: #5ada25;
-
-}
- 
 * {
     font-family: hand;
-    /*font-family: hand;
-    padding: 1vw;
-    margin: 1vw;
-    border: 1px solid black;*/
+    box-sizing: border-box;
+}
+:root{
+--SandYellow: #feffd6;
+--DarkGreen: #0b4b2b;
+--SkyBlue: #00cbff;
+--LightGreen: #5ada25;
+--Lightgray: #656565;
 }
 
-body {
-    background-image: linear-gradient(SkyBlue, #feffd6,  #feffd6);
+body{
+margin: 0;
+padding: 0;
+font-family: Arial;
+text-transform: uppercase;
+font-weight: bold;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+}
+.header{
+background-color: #0b4b2b;
+color: white;
+height: 10vh;
+min-height: 35px;
+text-align: center;
+padding:var(--DarkGreen) ;
+padding-top: 1px;
+
+
+}
+.allcontainer{
+background-image:
+ linear-gradient(SkyBlue,SkyBlue, #feffd6,  #feffd6);
+height: 90vh;
+display: flex;
+flex-direction: column;
+}
+.topnav {
+
+overflow: hidden;
+background-color: var(--DarkGreen);
+line-height: 20px;
 }
 
-.container {
-    display: grid;
-    grid-template-areas: 
-    'header header'
-    'nav nav'
-    'left right'
-    'footer footer'
-    ;
+.topnav a {
+float:right;
+display: block;
+width:33.3333%;
+min-width: 60px;
+color: black;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 16px;
+color:#fff;
 }
 
-.AnimalKing {
-    grid-area: header;
-    background-color: var(--DarkGreen);
-    color: white;
-    height: 15vh;
-   
+.topnav a:hover {
+background-color: var(--Lightgray);
+color: black;
 }
 
+.topnav a.active {
+background-color: var(--LightGreen);
+color: white;
+}
 .JoinGame {
-    grid-area: left;
-    border: none;
-    outline: none;
-    width: 15vw;
-    padding: 10px 16px; 
-    margin-left: 53.7%;
-    margin-right: 10%;
-    margin-top: 10%;
-    color: white;
-    background-color: var(--DarkGreen);
-    cursor: pointer;
+min-width: 100px;
+grid-area: left;
+border-radius: 20px;
+outline: none;
+width: 15vw;
+padding: 10px 16px; 
+margin-right: 50%;
+margin-top: 10%;
+color: white;
+background-color: var(--DarkGreen);
+cursor: pointer;
 }
 
 .CreateGame {
-    grid-area: right;
-    border: none;
-    outline: none;
-    width: 15vw;
-    padding: 10px 16px;
-    margin-left: 6.4%;
-    margin-top: 10%;
-    color: white;
-    background-color: var(--DarkGreen);
-    cursor: pointer;
+min-width: 100px;
+grid-area: right;
+border-radius: 20px;
+outline: none;
+width: 15vw;
+padding: 10px 16px;
+margin-left: 60%;
+margin-top: 10%;
+color: white;
+background-color: var(--DarkGreen);
+cursor: pointer;
 }
-.nav{
-    grid-area: nav;
-    margin-top: 4%;
+.btncont{
+display: grid;
+grid-template-areas: 
+'right left'
+;
+}
+.active, .CreateGame:hover {
+background-color: #666;
+color: white;
+}
+.active, .JoinGame:hover {
+background-color: #666;
+color: white;
+}
+
+.Hometxt{
+background-color: var(--SandYellow);
+height: 10vh;
+min-height: 1px;
+text-align: center;
+margin-top: auto;
+
 }
 .footer{
-    grid-area: footer;
-    margin-top: 43vh;
-    height: 5vh;
+background-color: #0b4b2b;
+height: 10vh;
+min-height: 25px;
+padding:var(--DarkGreen) ;
+margin-top: auto;
 }
-.btn {
-    border: none;
-    outline: none;
-    width: 20%;
-    padding: 10px 16px;
-    margin-right: 20px;
-    margin-left: 20px;
-    color: white;
-    background-color: var(--DarkGreen);
-    cursor: pointer;
-  }
-  .active, .btn:hover {
-    background-color: #666;
-    color: white;
-  }
-  .active, .CreateGame:hover {
-    background-color: #666;
-    color: white;
-  }
-  .active, .JoinGame:hover {
-    background-color: #666;
-    color: white;
-  }
-  
+
 @font-face {
-    font-family: hand;
-    src: url(../Fonts/trashim/trashim/trashimclm-bold-webfont.ttf);
+font-family: hand;
+src: url(../FontsAndImg/trashim/trashim/trashimclm-bold-webfont.ttf);
 }
-  
