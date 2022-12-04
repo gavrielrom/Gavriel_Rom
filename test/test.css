@@ -1,0 +1,47 @@
+:root {
+
+    --SandYellow: #feffd6;
+    --DarkGreen: #0b4b2b;
+    --SkyBlue: #00cbff;
+    --LightGreen: #5ada25;
+
+}
+ 
+* {
+    font-family: hand;
+    padding: 1vw;
+    margin: 1vw;
+    border: 1px solid black;
+}
+
+body {
+    background-image: linear-gradient(SkyBlue, #feffd6,  #feffd6);
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'left right'
+    ;
+}
+
+.AnimalKing {
+    grid-area: header;
+    background-color: var(--DarkGreen);
+    color: white;
+    height: 20vh;
+}
+
+.JoinGame {
+    grid-area: left;
+    background-color: var(--LightGreen);
+    height: 40vh;
+}
+
+.CreateGame {
+    grid-area: right;
+    background-color:var(--LightGreen);
+    height: 40vh;
+}
+

@@ -1,0 +1,103 @@
+:root {
+
+    --SandYellow: #feffd6;
+    --DarkGreen: #0b4b2b;
+    --SkyBlue: #00cbff;
+    --LightGreen: #5ada25;
+
+}
+ 
+* {
+    font-family: hand;
+    /*font-family: hand;
+    padding: 1vw;
+    margin: 1vw;
+    border: 1px solid black;*/
+}
+
+body {
+    background-image: linear-gradient(SkyBlue, #feffd6,  #feffd6);
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'nav nav'
+    'left right'
+    'footer footer'
+    ;
+}
+
+.AnimalKing {
+    grid-area: header;
+    background-color: var(--DarkGreen);
+    color: white;
+    height: 15vh;
+    min-height: 20%;
+}
+
+.JoinGame {
+    grid-area: left;
+    border: none;
+    outline: none;
+    width: 15vw;
+    padding: 10px 16px; 
+    margin-left: 53.7%;
+    margin-right: 10%;
+    margin-top: 10%;
+    color: white;
+    background-color: var(--DarkGreen);
+    cursor: pointer;
+}
+
+.CreateGame {
+    grid-area: right;
+    border: none;
+    outline: none;
+    width: 15vw;
+    padding: 10px 16px;
+    margin-left: 6.4%;
+    margin-top: 10%;
+    color: white;
+    background-color: var(--DarkGreen);
+    cursor: pointer;
+}
+.nav{
+    grid-area: nav;
+    margin-top: 4%;
+}
+.footer{
+    grid-area: footer;
+    margin-top: 43vh;
+    height: 5vh;
+}
+.btn {
+    border: none;
+    outline: none;
+    width: 20%;
+    padding: 10px 16px;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: white;
+    background-color: var(--DarkGreen);
+    cursor: pointer;
+  }
+  .active, .btn:hover {
+    background-color: #666;
+    color: white;
+  }
+  .active, .CreateGame:hover {
+    background-color: #666;
+    color: white;
+  }
+  .active, .JoinGame:hover {
+    background-color: #666;
+    color: white;
+  }
+  
+@font-face {
+    font-family: hand;
+    src: url(../Fonts/trashim/trashim/trashimclm-bold-webfont.ttf);
+}
+  
