@@ -29,7 +29,7 @@ justify-content: center;
 background-color: #0b4b2b;
 color: white;
 height: 10vh;
-min-height: 35px;
+min-height: 60px;
 text-align: center;
 padding:var(--DarkGreen) ;
 padding-top: 1px;
@@ -162,12 +162,18 @@ margin-top: auto;
   .inout .End_Time{
     grid-area: time;
   }
-  .Create_Game_btn{
+  .CreateGamebtn{
     padding: 10px 16px;
     margin: 1vh;
+    background-color: #5ada25;
+    width: 20vw;
+    border-radius: 20px;
+  }
+  .guide{
+    margin: -2vh;
   }
 
-
+/*Join a Game*/
 
 
 
