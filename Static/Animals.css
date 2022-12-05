@@ -71,26 +71,29 @@ color: black;
 
 .JoinGame {
 min-width: 100px;
-grid-area: left;
+grid-area: right;
 border-radius: 20px;
 outline: none;
 width: 15vw;
 padding: 10px 16px; 
 margin-right: 50%;
+margin-left: 10%;
 margin-top: 10%;
 color:#fff;
 background-color: var(--DarkGreen);
 cursor: pointer;
+margin-left: 10%;
 }
 
 .CreateGame {
 min-width: 100px;
-grid-area: right;
+grid-area: left;
 border-radius: 20px;
 outline: none;
 width: 15vw;
 padding: 10px 16px;
-margin-left: 60%;
+margin-left: 50%;
+margin-right: 10%;
 margin-top: 10%;
 color: white;
 background-color: var(--DarkGreen);
@@ -99,7 +102,7 @@ cursor: pointer;
 .btncont{
 display: grid;
 grid-template-areas: 
-'right left'
+'left right'
 ;
 }
 .active, .CreateGame:hover {
@@ -162,7 +165,7 @@ margin-top: auto;
   .inout .End_Time{
     grid-area: time;
   }
-  .CreateGamebtn{
+  .btn{
     padding: 10px 16px;
     margin: 1vh;
     background-color: #5ada25;
@@ -173,10 +176,30 @@ margin-top: auto;
     margin: -2vh;
   }
 
-/*Join a Game*/
-
-
-
+/*GroupPage*/
+.GameContainer{
+  display: grid;
+  grid-template-areas:
+  'img img img info'
+  'img img img input'
+  'img img img enter'
+  ;
+}
+.GameInfo {
+  margin-left: 40vw;
+  grid-area: info;
+}
+.PlayArea{
+  margin-left: 40vw;
+  grid-area: input;
+}
+.AddAnimal{
+  padding: 1px 1px;
+  height: 10vh;
+  margin-top: 10%;
+  grid-area: enter;
+ 
+}
 
 
 
