@@ -1,6 +1,7 @@
 * {
     font-family: hand;
     box-sizing: border-box;
+ 
 }
 :root{
 --SandYellow: #feffd6;
@@ -19,6 +20,10 @@ font-weight: bold;
 min-height: 100vh;
 display: flex;
 flex-direction: column;
+justify-content: center;
+
+
+
 }
 .header{
 background-color: #0b4b2b;
@@ -46,7 +51,7 @@ line-height: 20px;
 }
 
 .topnav a {
-float:right;
+float: right;
 display: block;
 width:33.3333%;
 min-width: 60px;
@@ -63,10 +68,7 @@ background-color: var(--Lightgray);
 color: black;
 }
 
-.topnav a.active {
-background-color: var(--LightGreen);
-color: white;
-}
+
 .JoinGame {
 min-width: 100px;
 grid-area: left;
@@ -76,7 +78,7 @@ width: 15vw;
 padding: 10px 16px; 
 margin-right: 50%;
 margin-top: 10%;
-color: white;
+color:#fff;
 background-color: var(--DarkGreen);
 cursor: pointer;
 }
@@ -124,8 +126,60 @@ min-height: 25px;
 padding:var(--DarkGreen) ;
 margin-top: auto;
 }
-
 @font-face {
-font-family: hand;
-src: url(../FontsAndImg/trashim/trashim/trashimclm-bold-webfont.ttf);
-}
+    font-family: hand;
+    src: url(../FontsAndImg/trashim/trashim/trashimclm-bold-webfont.ttf);
+    }
+
+/*Create New Game*/
+
+.form-wrap {
+    background:transparent;
+    width: 40vw;
+  }
+
+  .signup-form{
+    margin: 2vh;
+    display: grid;
+    grid-template-areas: 
+    'username'
+    'passward'
+    'time'
+    'create'
+    'goodluck'
+    ;
+  }
+  .input {
+    padding: 10px 16px;
+    margin: 1vh;
+  }
+  .input .user_name{
+    grid-area:username ;
+  }
+  .intup .user_pass{
+    grid-area: passward;
+  }
+  .inout .End_Time{
+    grid-area: time;
+  }
+  .Create_Game_btn{
+    padding: 10px 16px;
+    margin: 1vh;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
