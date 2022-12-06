@@ -178,27 +178,53 @@ margin-top: auto;
 
 /*GroupPage*/
 .GameContainer{
+  max-width: 100%;
   display: grid;
   grid-template-areas:
-  'img img img info'
-  'img img img input'
-  'img img img enter'
+  'dyn dyn info'
+  'dyn dyn input'
+  'dyn dyn enter'
   ;
 }
 .GameInfo {
-  margin-left: 40vw;
   grid-area: info;
+  margin-left: 20vw;
 }
 .PlayArea{
-  margin-left: 40vw;
   grid-area: input;
+  margin-left: 20vw;
+ 
 }
 .AddAnimal{
-  padding: 1px 1px;
-  height: 10vh;
-  margin-top: 10%;
+  padding-top: 20vh;
+  margin-top: 20vh;
   grid-area: enter;
+  margin-left: 20vw;
+}
+.DynamicContainer{
+  margin-left: 10vw;
+  grid-area: dyn;
+  grid-template-areas: 
+  'img img'
+  'img img'
+  'add points'
+  ;
+}
+.AnimalImg {
+  padding: 15px 15px;
+  grid-area: img;
+}
+img {
+  width: 30vh;
+  height: 30vh;
+  border-radius: 50%;
+}
+.AddSighting {
  
+  grid-area: add;
+}
+.WonPoints {
+  grid-area: points;
 }
 
 
