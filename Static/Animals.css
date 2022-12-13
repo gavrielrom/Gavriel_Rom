@@ -21,9 +21,6 @@ min-height: 100vh;
 display: flex;
 flex-direction: column;
 justify-content: center;
-
-
-
 }
 .header{
 background-color: #0b4b2b;
@@ -68,7 +65,6 @@ background-color: var(--Lightgray);
 color: black;
 }
 
-
 .JoinGame {
 min-width: 100px;
 grid-area: right;
@@ -83,6 +79,7 @@ color:#fff;
 background-color: var(--DarkGreen);
 cursor: pointer;
 margin-left: 10%;
+align-self: center;
 }
 
 .CreateGame {
@@ -98,6 +95,11 @@ margin-top: 10%;
 color: white;
 background-color: var(--DarkGreen);
 cursor: pointer;
+align-self: center;
+}
+
+@keyframes pop{
+  100%  {transform: scale(1.2);}
 }
 .btncont{
 display: grid;
@@ -108,10 +110,14 @@ grid-template-areas:
 .active, .CreateGame:hover {
 background-color: #666;
 color: white;
+animation: pop 0.2s;
+animation-fill-mode: forwards;
 }
 .active, .JoinGame:hover {
 background-color: #666;
 color: white;
+animation: pop 0.2s;
+animation-fill-mode: forwards;
 }
 
 .Hometxt{
@@ -133,6 +139,27 @@ margin-top: auto;
     font-family: hand;
     src: url(../FontsAndImg/trashim/trashim/trashimclm-bold-webfont.ttf);
     }
+
+
+@media only screen and (max-width: 550px) {
+  .btncont{
+    display: grid;
+    grid-template-areas: 
+    'left'
+    'right'
+    ;
+    }
+    .JoinGame{
+      margin-right: 0;
+      margin-left: 42vw;
+      align-self: center;
+    }
+    .CreateGame{
+      margin-left: 42vw;
+      margin-right: 0;
+      align-self: center;
+    }
+}
 
 /*Create New Game*/
 
@@ -166,6 +193,7 @@ margin-top: auto;
     grid-area: time;
   }
   .btn{
+    max-width: 100px;
     padding: 10px 16px;
     margin: 1vh;
     background-color: #5ada25;
@@ -174,12 +202,15 @@ margin-top: auto;
     align-self: center;
     cursor: pointer;
   }
+ 
   .guide{
     margin: -2vh;
   }
 .active, .btn:hover{
   background-color: #666;
   color: white;
+  animation: pop 0.2s;
+  animation-fill-mode: forwards;
 }
 /*GroupPage*/
 .GameContainer{
@@ -193,11 +224,9 @@ margin-top: auto;
 }
 .GameInfo {
   grid-area: info;
-  margin-left: 20vw;
 }
 .PlayArea{
   grid-area: input;
-  margin-left: 20vw;
  
 }
 .AddAnimal{
@@ -231,13 +260,78 @@ img {
 .WonPoints {
   grid-area: points;
 }
+@media only screen and (max-width: 550px){
+  .topnav {
+    overflow:visible;
+    }
+    html.TeamPage body{
+      min-height: 120vh;
+      }
+      html.TeamPage .allcontainer{
+        height: 110vh;
+        }
+  .GameContainer{
+    align-self: center;
+    max-width: 70%;
+    display: grid;
+    grid-template-areas:
+    'info'
+    'input'
+    'enter'
+    'dyn'
+    ;
+  }
+  .GameInfo {
+    margin-left: 14vw;
+  }
+
+  .PlayArea{
+    margin-left: 10vw;
+    align-self: center;
+  }
+  .btn, .AddAnimal{
+    margin-left: 6vw;
+    margin-top: 2vh;
+  }
+  .DynamicContainer{
+    margin-left: 10vw;
+    grid-area: dyn;
+    grid-template-areas: 
+    'img img'
+    'img img'
+    'add points'
+    ;
+  }
+  .AnimalImg {
+    padding: 15px 15px;
+    grid-area: img;
+  }
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: 5vw;
+    margin-top: -2vh;
+  }
+  .btn, .AddSighting {
+    margin-top: -0vh;
+    grid-area: add;
+  }
+  .WonPoints {
+    margin-right: 3vw;
+    margin-top: -6vh;
+    grid-area: points;
+  }
+}
+/*Wining Page*/
+
+.WiningTitle {
+  align-self: center;
+  padding-top: 10vh;
+}
 
 
-
-
-
-
-
+/*Animal List*/
 
 
 
