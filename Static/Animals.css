@@ -76,7 +76,7 @@ border-radius: 20px;
 outline: none;
 width: 15vw;
 padding: 10px 16px; 
-margin-right: 50%;
+margin-right: 55%;
 margin-left: 10%;
 margin-top: 10%;
 color:#fff;
@@ -92,7 +92,7 @@ border-radius: 20px;
 outline: none;
 width: 15vw;
 padding: 10px 16px;
-margin-left: 50%;
+margin-left: 55%;
 margin-right: 10%;
 margin-top: 10%;
 color: white;
@@ -171,11 +171,16 @@ margin-top: auto;
     background-color: #5ada25;
     width: 20vw;
     border-radius: 20px;
+    align-self: center;
+    cursor: pointer;
   }
   .guide{
     margin: -2vh;
   }
-
+.active, .btn:hover{
+  background-color: #666;
+  color: white;
+}
 /*GroupPage*/
 .GameContainer{
   max-width: 100%;
