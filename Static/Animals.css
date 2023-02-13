@@ -141,7 +141,7 @@ margin-top: auto;
 }
 @font-face {
     font-family: hand;
-    src: url(../FontsAndImg/trashim/trashim/trashimclm-bold-webfont.ttf);
+    src: url(/trashim/trashim/trashimclm-bold-webfont.ttf);
     }
 
 
@@ -326,6 +326,12 @@ img {
     margin-top: -6vh;
     grid-area: points;
   }
+
+  .active{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 30vw;
+    height: 77px;
+  }
 }
 /*Wining Page*/
 
@@ -346,8 +352,7 @@ img {
 }
 
 .active{
-  background-color: rgba(255, 255, 255, 0.534);
-  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 
