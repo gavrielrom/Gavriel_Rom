@@ -1,35 +1,45 @@
 const connection = require('./db');
-const csvtojson = require('csvtojson');
+const csv = require('csvtojson');
+const path = require('path');
 
 const CreateTables = (req,res)=>{
-    const Q1 = "CREATE TABLE Animals (AnimalName VARCHAR(100), AnimalScore int)";
-    connection.query(Q1, (err, mysqlres)=>{
+    const AnimalsTable = "CREATE TABLE Animals (AnimalName VARCHAR(100), AnimalScore INT)";
+    connection.query(AnimalsTable, (err, mysqlres)=>{
         if (err) {
-            res.status(400).send({massage: 'table not created'});
+            res.status(400).send({massage: 'table 1 not created'});
             return;
         }
-        res.send({message:"table created"})
+        res.send({message:"table 1 created"})
+    })
+    const GamesTable = "CREATE TABLE Games (GameName VARCHAR(30), GamePassword VARCHAR(30))";
+    connection.query(GamesTable, (err, mysqlres)=>{
+        if (err) {
+            res.status(400).send({massage: 'table 1 not created'});
+            return;
+        }
+        res.send({message:"table 1 created"})
     })
 };
 
 const InsertDataIntoTables = (req,res)=>{
-    const Q2 = "INSERT INTO Animals SET ?";
-    const DataFilePath = path.join(__dirname,'AnimalsData.csv');
-    csv().fromFile(DataFilePath).then((jsonObj)=>{
+    var Q2 = "INSERT INTO Animals SET ?";
+    const csvFilePath = path.join(__dirname, 'AnimalsData.csv');
+    csv().fromFile(csvFilePath).then((jsonObj)=>{
         console.log(jsonObj);
         jsonObj.forEach(element => {
-            const newEntry = {
-                "AnimalName": Element.AnimalName,
-                "AnimalScore": Element.AnimalScore
+            var NewEntry = {
+                "AnimalName": element.AnimalName,
+                "AnimalScore": element.AnimalScore
             }
-        })
+            SQL.query(Q2, NewEntry, (err, mysqlres)=>{
+                if (err) {
+                    console.log("error in inserting data", err);
+                }
+                console.log("created row successfuly");
+            });
+        });
     });
-    connection.query(Q2, NewEntry, (err, mysqlres)=>{
-        if(err) {
-            console.log("error in inserting data", err);
-        }
-        console.log("created row successfuly");
-    })
+   res.send("data inserted")
   }
 
 module.exports={CreateTables, InsertDataIntoTables};

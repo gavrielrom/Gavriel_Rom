@@ -27,6 +27,7 @@ app.get('/static/Animals.js', (req, res) => {
 //לטפסים ששמים נתונים בבסיס נשתמש ב POST
 //לטפסים ששולפים נתונים מהבסיס GET
 app.all('/CreateTables', CreateDB.CreateTables);
+app.all('/InsertdataIntoTables', CreateDB.InsertDataIntoTables);
 
 //routes for web pages
 app.get('/', (req, res)=>{
