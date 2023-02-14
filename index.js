@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const BodyParser = require('body-parser');
 const sql = require('./db/db');
+const CreateDB = require('./db/CreateDB');
 const port = 3000;
 
 app.use(express.static(path.join(__dirname,'static')));
@@ -22,6 +23,12 @@ app.get('/static/Animals.js', (req, res) => {
   res.sendFile(__dirname + '/static/Animals.js');
 });
 
+//routs for creating db
+//לטפסים ששמים נתונים בבסיס נשתמש ב POST
+//לטפסים ששולפים נתונים מהבסיס GET
+app.all('/CreateTables', CreateDB.CreateTables);
+
+//routes for web pages
 app.get('/', (req, res)=>{
     res.sendFile(__dirname + '/Views/HomePage.html')
 })
