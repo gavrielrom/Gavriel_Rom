@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const BodyParser = require('body-parser');
+const sql = requier('./db/db');
 const port = 3000;
 
 app.use(express.static(path.join(__dirname,'static')));
