@@ -6,18 +6,18 @@ const CreateTables = (req,res)=>{
     const AnimalsTable = "CREATE TABLE Animals (AnimalName VARCHAR(100), AnimalScore INT)";
     connection.query(AnimalsTable, (err, mysqlres)=>{
         if (err) {
-            res.status(400).send({massage: 'table 1 not created'});
+            res.status(400).send({massage: 'table not created'});
             return;
         }
-        res.send({message:"table 1 created"})
+        res.send({message:"table created"})
     })
     const GamesTable = "CREATE TABLE Games (GameName VARCHAR(30), GamePassword VARCHAR(30))";
     connection.query(GamesTable, (err, mysqlres)=>{
         if (err) {
-            res.status(400).send({massage: 'table 1 not created'});
+            res.status(400).send({massage: 'table not created'});
             return;
         }
-        res.send({message:"table 1 created"})
+        res.send({message:"table created"})
     })
 };
 
